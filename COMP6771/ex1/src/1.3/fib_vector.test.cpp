@@ -20,3 +20,19 @@ TEST_CASE("Works when n == 1") {
 }
 
 // add more tests here...
+
+TEST_CASE("Works when n is negative") {
+    const auto expected = std::vector<int>{};
+
+    auto nums = fibonacci(-1);
+
+    CHECK(nums == expected);
+}
+
+TEST_CASE("Given example") {
+    const auto expceted = std::vector<int>{1, 2, 3, 5, 8};
+
+    auto nums = fibonacci(5);
+
+    CHECK(nums == expceted);
+}
