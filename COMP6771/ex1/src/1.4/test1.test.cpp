@@ -33,6 +33,12 @@ TEST_CASE("Basic arithmetic") {
     REQUIRE( 1 == 5 ); // test case would terminate here -> next section would not run
         
     SECTION("a + b should be 16") {
+        
+        
+        SECTION("a + b should be 16") {
+            REQUIRE(a + b == 16); 
+        }
+
         REQUIRE(a + b == 16); 
     }
 }
