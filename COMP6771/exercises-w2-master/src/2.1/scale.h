@@ -9,6 +9,6 @@
  * @param factor - the factor by which to scale. Defaults to 0.5
  * @return - a new vector of doubles
  */
-auto scale(std::vector<int> &ivec, double factor) -> std::vector<double>;
+auto scale(std::vector<int>& ivec, double factor) -> std::vector<double>;
 
 #endif // COMP6771_SCALE_H
