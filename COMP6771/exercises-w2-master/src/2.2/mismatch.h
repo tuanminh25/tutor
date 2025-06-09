@@ -16,6 +16,6 @@ using iter = typename std::vector<int>::iterator;
  * @return A pair consisting of iterators into v1 and v2 respectively where the first mismatch is.
  *         Either element in the pair may be end() to signal that the end of that range was reached
  */
-auto mismatch(std::vector<int> &v1, std::vector<int> &v2) -> std::pair<iter, iter>;
+auto mismatch(std::vector<int>& v1, std::vector<int>& v2) -> std::pair<iter, iter>;
 
 #endif // COMP6771_MISMATCH_H
