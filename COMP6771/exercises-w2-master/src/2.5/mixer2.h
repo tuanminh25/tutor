@@ -6,31 +6,23 @@
 #include <vector>
 
 // all enum members should be in SCREAM_CASE
-enum class paint : unsigned char {
-    RED,
-    GREEN,
-    BLUE,
-    YELLOW,
-    CYAN,
-    MAGENTA,
-    BROWN
-};
+enum class paint : unsigned char { RED, GREEN, BLUE, YELLOW, CYAN, MAGENTA, BROWN };
 
 using mixer_fn = std::optional<paint>(paint, paint);
 
 /**
-* Mixes colours according to the below rules.
-* red + green = yellow
-* red + blue = magenta
-* green + blue = cyan
-* yellow + magenta = brown
-* yellow + cyan = brown
-* cyan + magenta = brown
-* brown + brown = brown
-* otherwise, no combintion
-* 
-* NOTE: red + green != green + red! the order is important (that's why it's wacky!)
-*/
+ * Mixes colours according to the below rules.
+ * red + green = yellow
+ * red + blue = magenta
+ * green + blue = cyan
+ * yellow + magenta = brown
+ * yellow + cyan = brown
+ * cyan + magenta = brown
+ * brown + brown = brown
+ * otherwise, no combintion
+ *
+ * NOTE: red + green != green + red! the order is important (that's why it's wacky!)
+ */
 auto wacky_colour(paint p1, paint p2) -> std::optional<paint>;
 
 /**
@@ -47,9 +39,11 @@ auto wacky_colour(paint p1, paint p2) -> std::optional<paint>;
  * returns an empty optional<paint>.
  *
  * @param paints - A vector of paints to mix
- * @param fn - the mixing strategy. A function that accepts two colours at a time and returns either a new colour, or no colour at all.
+ * @param fn - the mixing strategy. A function that accepts two colours at a time and returns either
+ * a new colour, or no colour at all.
  * @return - An optional paint denoting the mixed colour or nothing if there was no combination
  */
-auto mix(const std::vector<paint> &paints, std::function<mixer_fn> fn = wacky_colour) -> std::optional<paint>;
+auto mix(const std::vector<paint>& paints,
+         std::function<mixer_fn> fn = wacky_colour) -> std::optional<paint>;
 
 #endif // COMP6771_MIXER_H
