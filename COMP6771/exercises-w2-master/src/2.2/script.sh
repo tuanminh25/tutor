@@ -1,0 +1,1 @@
+g++ -I. mismatch_m.cpp mismatch.h mismatch.test.cpp catch2_main.cpp -o mismatch
