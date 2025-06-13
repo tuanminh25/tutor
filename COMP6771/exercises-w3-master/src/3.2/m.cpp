@@ -15,6 +15,14 @@ put in external values
     function_body
 }
 
+pass type is callable with two arguments, and returns bool
+                           v
+std::sort(begin, end, comparator)
+
+https://en.cppreference.com/w/cpp/algorithm/sort.html
+
+comparator is not an object, it is a template
+
 */
 
 auto vowel_sort(std::vector<std::string> &vs) -> void {

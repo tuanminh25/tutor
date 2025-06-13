@@ -1,0 +1,7 @@
+template<class T> == template<typename T>
+
+https://en.cppreference.com/w/cpp/algorithm/sort.html
+
+
+The only place where typename 
+is required is inside the template body when you're referring to dependent types
