@@ -339,6 +339,8 @@ This also relates to a style issue, as the helper function must be exposed in th
 
 As a caveat, it is okay to conduct your own private testing, so long as this is not committed and submitted into your final assignment code.
 
+-> Don't expose or test helpers directly in assignment submissions. Test them through public methods that use them.
+
 ## Clarity
 
 ### Order
@@ -354,7 +356,7 @@ Currently, the testing order is scrambled:
 1. it begins with a complex test;
 2. constructors are written last.
 
-### Veracity
+### Veracity - accuracy
 
 You should be able to clearly verify the expected answer of a test.
 
