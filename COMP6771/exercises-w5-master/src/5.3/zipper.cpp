@@ -24,7 +24,7 @@ concept reversible_container = requires(Container c) {
 // static_assert(reversible_container<zip>);
 
 int main() {
-    /*std::vector<int> i1 = {1, 2, 3};
+    std::vector<int> i1 = {1, 2, 3};
     std::vector<int> i2 = {4, 5};
 
 	auto zp = zip{i1, i2};
@@ -42,7 +42,7 @@ int main() {
 
 	for (auto it = zp.crbegin(), last = zp.crend(); it != last; ++it) {
         std::cout << (*it).first << " " << (*it).second << std::endl;
-	}*/
+	}
 }
 
 /* Output

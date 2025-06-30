@@ -28,35 +28,35 @@ int main() {
 	auto r = rope{{"rbg", "gsc", "rse"}};
 	const auto cr = rope{{"dppt", "b2w2", "xysm"}};
 
-	for (auto it = r.begin(); it != r.end(); ++it) {
-		std::cout << *it;
-	}
-	std::cout << std::endl;
+	// for (auto it = r.begin(); it != r.end(); ++it) {
+	// 	std::cout << *it;
+	// }
+	// std::cout << std::endl;
 
-	for (auto it = cr.begin(); it != cr.end(); ++it) {
-		std::cout << *it;
-	}
-	std::cout << std::endl;
+	// for (auto it = cr.begin(); it != cr.end(); ++it) {
+	// 	std::cout << *it;
+	// }
+	// std::cout << std::endl;
 
-	for (auto it = r.cbegin(); it != r.cend(); ++it) {
-		std::cout << *it;
-	}
-	std::cout << std::endl;
+	// for (auto it = r.cbegin(); it != r.cend(); ++it) {
+	// 	std::cout << *it;
+	// }
+	// std::cout << std::endl;
 
-	for (auto it = r.rbegin(); it != r.rend(); ++it) {
-		std::cout << *it;
-	}
-	std::cout << std::endl;
+	// for (auto it = r.rbegin(); it != r.rend(); ++it) {
+	// 	std::cout << *it;
+	// }
+	// std::cout << std::endl;
 
-	for (auto it = cr.rbegin(); it != cr.rend(); ++it) {
-		std::cout << *it;
-	}
-	std::cout << std::endl;
+	// for (auto it = cr.rbegin(); it != cr.rend(); ++it) {
+	// 	std::cout << *it;
+	// }
+	// std::cout << std::endl;
 
-	for (auto it = r.crbegin(); it != r.crend(); ++it) {
-		std::cout << *it;
-	}
-	std::cout << std::endl;
+	// for (auto it = r.crbegin(); it != r.crend(); ++it) {
+	// 	std::cout << *it;
+	// }
+	// std::cout << std::endl;
 }
 
 /* Output should be
