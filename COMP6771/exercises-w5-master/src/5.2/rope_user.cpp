@@ -25,7 +25,7 @@ concept reversible_container = requires(Container c) {
 // static_assert(reversible_container<rope>);
 
 int main() {
-	/*auto r = rope{{"rbg", "gsc", "rse"}};
+	auto r = rope{{"rbg", "gsc", "rse"}};
 	const auto cr = rope{{"dppt", "b2w2", "xysm"}};
 
 	for (auto it = r.begin(); it != r.end(); ++it) {
@@ -56,7 +56,7 @@ int main() {
 	for (auto it = r.crbegin(); it != r.crend(); ++it) {
 		std::cout << *it;
 	}
-	std::cout << std::endl;*/
+	std::cout << std::endl;
 }
 
 /* Output should be
