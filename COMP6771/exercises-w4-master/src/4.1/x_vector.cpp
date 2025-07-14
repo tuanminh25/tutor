@@ -6,12 +6,12 @@
 #include "./x_vector.h"
 
 #define SPECIAL_LETTER 'x'
-
+const
 /**
     0. HELPER METHODS
  */
 
-auto string_contains_special(std::string const s) -> bool {
+auto string_contains_special(std::string const &s) -> bool {
 	// .find returns the constant npos if the character was not found
 	return s.find(SPECIAL_LETTER) != std::string::npos;
 }
@@ -24,6 +24,12 @@ xector::xector() {
 	items_ = std::vector<std::string>();
 }
 
+xector::xector() = default
+
+
+
+
+
 xector::xector(std::initializer_list<std::string> items) {
 	items_ = std::vector<std::string>();
 	for (auto i : items) {
@@ -31,22 +37,45 @@ xector::xector(std::initializer_list<std::string> items) {
 	}
 }
 
+xector::xector(std::initializer_list<std::string> items) : items_{items.begin(), items.end()} {}
+
+A(int a, int b) : a_(a), b_(b) {}
+
+A(int a, int b) {
+	 a_ = a; 
+	 b_ = b;
+}
+
+
+
+
+
+
+
+
 xector::xector(std::vector<std::string>::const_iterator start,
                std::vector<std::string>::const_iterator end)
 : items_{start, end} {}
+
 
 xector::xector(std::vector<std::string> const& items) {
 	items_ = std::vector(items.begin(), items.end());
 }
 
+xector::xector(std::initializer_list<std::string> items) : items_{items.begin(), items.end()} {}
+
+
+xector::xector(std::vector<std::string> const &items) : xector(items.begin(), items.end()) {}
+
+
 /**
     2. CLASS METHODS
 */
 
-size_t xector::size() {
+size_t xector::size() const {
 	size_t result = 0;
 	for (size_t i = 0; i < items_.size(); ++i) {
-		auto curr = items_.at(i);
+		auto &curr = items_.at(i);
 		if (string_contains_special(curr)) {
 			// add one to the result if we found a matching character
 			++result;
@@ -55,7 +84,17 @@ size_t xector::size() {
 	return result;
 }
 
-auto xector::first() -> std::optional<std::string> {
+    for (auto const &curr : items_) {
+        if (string_contains_special(curr)) {
+            ++result;
+        }
+    }
+
+size_t xector::size() {
+    return std::count_if(items_.begin(), items_.end(), string_contains_special)
+}
+
+auto xector::first() const -> std::optional<std::string> {
 	// TODO: test if this is needed
 	// if (items_.empty()) {
 	//     return std::nullopt;
@@ -78,3 +117,19 @@ auto xector::last() const -> std::optional<std::string> {
 auto xector::push_back(std::string item) -> void {
 	items_.push_back(item);
 }
+
+
+
+```cpp
+class dummy {
+public:
+    // only one exposed constructor that sets the value to 0
+    dummy() : dummy(0) {}
+private:
+    int val_;
+
+    // this private constructor accepts values for all members
+    dummy(int val) : val_{val} {}
+};
+
+```

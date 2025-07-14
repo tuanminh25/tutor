@@ -33,11 +33,11 @@ public:
      */
 
     // count the number of strings with an 'x'
-    size_t size();
+    size_t size() const;
 
     // find the first string that contains an 'x'
     // return a std::nullopt_t if there are no such elements
-    auto first() -> std::optional<std::string>;
+    auto first() const -> std::optional<std::string>;
 
     // find the last string that contains an 'x'
     // return a std::nullopt_t if there are no such elements
