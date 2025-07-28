@@ -14,6 +14,8 @@ int main() {
         {"billgates", "macros0ft"},                 // -> invalid -> throw even nums of log in
         {"billgates", "m1cros0ft"},                 // -> valid
     };
+
+    
     for (const auto &[uname, pwd] : attempts) {
         try {
             make_connection(db, uname, pwd);
